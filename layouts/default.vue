@@ -1,9 +1,9 @@
 <template>
   <div>
     <baseheader />
-    <div class="flex flex-row justify-between">
-      <sidebar />
-      <Nuxt class="px-6 py-6 bg-whiteGray" />
+    <div class="flex flex-row justify-between w-full h-full">
+      <sidebar class="md:hidden" />
+      <Nuxt class="bg-whiteGray" />
     </div>
   </div>
 </template>
@@ -26,5 +26,8 @@ header {
     rgba(26, 118, 224, 1) 0%,
     rgba(32, 124, 229, 1) 100%
   );
+}
+.bgwebsiteimg {
+  background-image: url('.././assets/image/bg.jpg');
 }
 </style>

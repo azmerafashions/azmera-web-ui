@@ -53,13 +53,18 @@ export default {
         name: 'Product',
         path: '/product',
       },
-      isSidebar: true,
+      isSidebar: false,
     }
   },
   methods: {
     toggleSidebar() {
       this.isSidebar = !this.isSidebar
     },
+  },
+  created() {
+    this.$nuxt.$on('toggleSidebar', () => {
+      this.isSidebar = true
+    })
   },
   components: {
     sidebaritem,
