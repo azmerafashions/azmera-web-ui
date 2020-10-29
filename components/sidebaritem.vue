@@ -2,12 +2,13 @@
   <div>
     <div>
       <div class="flex justify-start items-center">
-        <nuxt-link class="inline" :to="mainmenu.path"
+        <nuxt-link :class="linkClasses" class="inline" :to="mainmenu.path"
           >{{ mainmenu.name }}
         </nuxt-link>
         <div
           @click="toggleSubMenu"
-          class="cursor-pointer inline px-2 text-gray-700"
+          :class="iconClasses"
+          class="cursor-pointer inline px-2"
         >
           <svg
             class="fill-current h-4 w-4"
@@ -31,6 +32,16 @@ export default {
     mainmenu: {
       type: Object,
       required: true,
+    },
+    linkClasses: {
+      type: String,
+      required: false,
+      default: '',
+    },
+    iconClasses: {
+      type: String,
+      required: false,
+      default: 'text-gray-700',
     },
   },
   data() {

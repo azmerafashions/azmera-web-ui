@@ -1,9 +1,9 @@
 <template>
   <div>
     <baseheader />
-    <div class="flex flex-row justify-between w-full h-full">
+    <div>
       <sidebar class="md:hidden" />
-      <Nuxt class="bg-whiteGray" />
+      <Nuxt />
     </div>
   </div>
 </template>

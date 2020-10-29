@@ -1,11 +1,11 @@
 <template>
   <header
-    class="flex flex-col sticky top-0 mt-2 shadow-lg px-6 md:flex-row md:h-auto md:w-full md:justify-between md:mt-6"
+    class="flex flex-col px-6 py-2 sticky top-0 md:flex-row md:h-auto md:w-full md:justify-between md:mt-6"
   >
-    <div class="flex flex-row justify-between items-center mb-6 md:mb-0">
+    <div class="flex flex-row justify-between items-center md:mb-0">
       <div class="flex flex-row items-center">
         <img
-          class="w-20 h-20 mr-4 rounded-full"
+          class="w-16 h-16 mr-4 rounded-full"
           src="@/assets/image/logo.jpg"
           alt="logo"
         />
@@ -21,15 +21,22 @@
         </svg>
       </button>
     </div>
+    <div>
+      <bnav />
+    </div>
   </header>
 </template>
 
 <script>
+import basenavigation from '@/components/navigation/basenavigation'
 export default {
   methods: {
     toggleSidebar() {
       this.$nuxt.$emit('toggleSidebar')
     },
+  },
+  components: {
+    bnav: basenavigation,
   },
 }
 </script>
