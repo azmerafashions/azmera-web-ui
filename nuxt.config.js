@@ -33,6 +33,26 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    [
+      'nuxt-fontawesome',
+      {
+        component: 'fa',
+        imports: [
+          //import whole set
+          {
+            set: '@fortawesome/free-solid-svg-icons',
+            icons: ['fas'],
+          },
+          // {
+          // set: '@fortawesome/free-brands-svg-icons',
+          // icons: ['fad'],
+          // },
+          //import 2 icons from set
+          // please note this is PRO set in this example,
+          // you must have it in your node_modules to actually import
+        ],
+      },
+    ],
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)

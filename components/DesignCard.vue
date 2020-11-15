@@ -18,10 +18,10 @@
           src="@/assets/image/logo.jpg"
           alt=""
         />
-        <h1 class="-ml-20 text-xl" id="profilename">Zahanara</h1>
-        <h1 id="postdate">25.Aug.2020</h1>
+        <h5 class="-ml-20 text-xl" id="profilename">Zahanara</h5>
+        <h5 id="postdate">25.Aug.2020</h5>
       </li>
-      <li class="mt-2 text-2xl"><h1 id="posttitle">Hand Embroidary</h1></li>
+      <li class="mt-2 text-2xl"><h3 id="posttitle">Hand Embroidary</h3></li>
       <li>
         <p id="postdescription">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
@@ -29,9 +29,9 @@
         </p>
       </li>
       <li class="flex flex-row justify-between text-xl">
-        <h1>categories: <a href=""> Sharee </a><a href=""> Dress</a></h1>
+        <h3>categories: <a href=""> Sharee </a><a href=""> Dress</a></h3>
 
-        <h1>price:$100</h1>
+        <h3>price:$100</h3>
       </li>
       <li class="mt-4">
         <button

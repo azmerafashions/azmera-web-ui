@@ -3,14 +3,15 @@
     class="px-6 py-2 sticky top-0 flex flex-row justify-between w-full items-center"
   >
     <div class="flex flex-row justify-between items-center w-full md:mb-0">
-      <div class="flex flex-row items-center">
+      <nuxt-link to="/" class="flex cursor-pointer flex-row items-center">
         <img
           class="w-16 h-16 mr-4 rounded-full"
           src="@/assets/image/logo.jpg"
           alt="logo"
         />
         <h1 class="text-3xl text-white italic">Azmera Fashions</h1>
-      </div>
+      </nuxt-link>
+      <search class="hidden md:flex" />
 
       <button @click="toggleSidebar" class="md:hidden focus:outline-none">
         <svg
@@ -29,6 +30,7 @@
 
 <script>
 import basenavigation from '@/components/navigation/basenavigation'
+import search from '@/components/search.vue'
 export default {
   methods: {
     toggleSidebar() {
@@ -37,6 +39,7 @@ export default {
   },
   components: {
     bnav: basenavigation,
+    search,
   },
 }
 </script>
