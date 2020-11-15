@@ -38,6 +38,7 @@ export default {
       {
         component: 'fa',
         imports: [
+          //import whole set
           {
             set: '@fortawesome/free-solid-svg-icons',
             icons: ['fas'],
@@ -46,6 +47,7 @@ export default {
           // set: '@fortawesome/free-brands-svg-icons',
           // icons: ['fad'],
           // },
+          //import 2 icons from set
           // please note this is PRO set in this example,
           // you must have it in your node_modules to actually import
         ],

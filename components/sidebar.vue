@@ -1,13 +1,13 @@
 <template>
-  <div class="relative z-50">
+  <div class="relative">
     <div
-      id="sidebar"
       :class="isSidebar ? '' : 'hidden'"
+      id="sidebar"
       class="md:sticky fixed top-0 left-0 h-screen md:block footerbg bg-red-700w-2/3 md:w-1/5"
     >
       <div
-        class="float-right cursor-pointer md:hidden text-white text-lg px-4 py-2"
         @click="toggleSidebar"
+        class="float-right cursor-pointer md:hidden text-white text-lg px-4 py-2"
       >
         <fa icon="window-close"> </fa>
       </div>
@@ -24,7 +24,7 @@
           </li>
           <li>
             <sidebaritem :mainmenu="mainmenu">
-              <div slot="submenu" class="flex flex-col">
+              <div class="flex flex-col" slot="submenu">
                 <nuxt-link to="">submenu1</nuxt-link>
                 <nuxt-link to="">submenu2</nuxt-link>
                 <nuxt-link to="">submenu3</nuxt-link>
@@ -51,10 +51,6 @@
 import sidebaritem from '@/components/sidebaritem'
 import search from '@/components/search'
 export default {
-  components: {
-    sidebaritem,
-    search,
-  },
   data() {
     return {
       mainmenu: {
@@ -64,15 +60,19 @@ export default {
       isSidebar: false,
     }
   },
+  methods: {
+    toggleSidebar() {
+      this.isSidebar = !this.isSidebar
+    },
+  },
   created() {
     this.$nuxt.$on('toggleSidebar', () => {
       this.isSidebar = true
     })
   },
-  methods: {
-    toggleSidebar() {
-      this.isSidebar = !this.isSidebar
-    },
+  components: {
+    sidebaritem,
+    search,
   },
 }
 </script>

@@ -3,13 +3,13 @@
     <div class="flex justify-center md:justify-between border-2">
       <div class="h-screen w-full p-10 flex flex-col md:flex-row">
         <div
-          id="appname"
           class="flex flex-col bg-blue-600 flex-grow justify-end p-6 text-white md:justify-start"
+          id="appname"
         >
           <h1 class="text-4xl md:text-6xl">App name</h1>
           <h1 class="md:text-2xl">application description</h1>
         </div>
-        <ul id="login" class="mt-4 md:w-1/2 md:pl-10 md:py-10">
+        <ul class="mt-4 md:w-1/2 md:pl-10 md:py-10" id="login">
           <li><h1 class="text-2xl font-bold">Log in</h1></li>
           <li class="mt-2">
             <label for="username"
