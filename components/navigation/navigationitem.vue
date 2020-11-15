@@ -1,8 +1,8 @@
 <template>
   <div
+    class="relative flex justify-start items-center"
     @mouseenter="toggleSubMenu"
     @mouseleave="toggleSubMenu"
-    class="relative flex justify-start items-center"
   >
     <div :class="linkClasses" class="inline" :to="mainmenu.path">
       {{ mainmenu.name }}
@@ -18,7 +18,10 @@
         />
       </svg>
     </div>
-    <div class="absolute top-0 left-0" v-if="isSubmenu">
+    <div
+      v-if="isSubmenu"
+      class="absolute top-0 left-0 mt-12 text-center p-4 rounded-b-lg border-black border-2 border-t-0 border-solid shadow-lg text-lg bg-white text-blue-600"
+    >
       <slot name="submenu"> </slot>
     </div>
   </div>

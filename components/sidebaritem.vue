@@ -6,9 +6,9 @@
           >{{ mainmenu.name }}
         </nuxt-link>
         <div
-          @click="toggleSubMenu"
           :class="iconClasses"
           class="cursor-pointer inline px-2"
+          @click="toggleSubMenu"
         >
           <svg
             class="fill-current h-4 w-4"

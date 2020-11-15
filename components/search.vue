@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-row items-center relative">
     <input
-      class="box-border pl-6 rounded-lg bg-pink-200 text-white focus:bg-white focus:text-black outline-none"
+      class="box-border pl-6 rounded-lg bg-pink-200 text-white focus:bg-white focus:text-black outline-none py-1"
       placeholder="Search"
       type="text"
     />

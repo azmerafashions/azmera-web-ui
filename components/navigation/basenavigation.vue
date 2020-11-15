@@ -15,7 +15,7 @@
       linkClasses="text-white text-2xl"
       :mainmenu="{ name: 'Join Us', path: '' }"
     >
-      <div slot="submenu" class="mt-16 text-lg bg-white text-blue-600 p-6">
+      <div slot="submenu" class="">
         <div>zara</div>
         <div>zaha</div>
         <div>zahanara</div>
