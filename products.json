@@ -1,0 +1,46 @@
+{
+  "categories": [
+    { "id": "1", "name": "hand embroidery" },
+    { "id": "2", "name": "sharee" },
+    { "id": "3", "name": "dress" },
+    { "id": "4", "name": "baby dress" }
+  ],
+  "products": [
+    {
+      "id": "101",
+      "categoryId": "1",
+      "description": "this is hand stich product",
+      "material": ["cotton"],
+      "name": "dress",
+      "colors": "violet,purple,red,blue,white,lemon green",
+      "price": "10000",
+      "tags": ["1", "3", "2"],
+      "updatedOn": "24.11.2020",
+      "createdOn": "20.11.2020"
+    },
+    {
+      "id": "101",
+      "categoryId": "1",
+      "description": "this is hand stich product",
+      "material": ["cotton"],
+      "name": "dress",
+      "colors": "violet,purple,red,blue,white,lemon green",
+      "price": "10000",
+      "tags": ["1", "3", "2"],
+      "updatedOn": "24.11.2020",
+      "createdOn": "20.11.2020"
+    },
+    {
+      "id": "101",
+      "categoryId": "1",
+      "description": "this is hand stich product",
+      "material": ["cotton"],
+      "name": "dress",
+      "colors": "violet,purple,red,blue,white,lemon green",
+      "price": "10000",
+      "tags": ["1", "3", "2"],
+      "updatedOn": "24.11.2020",
+      "createdOn": "20.11.2020"
+    }
+  ]
+}

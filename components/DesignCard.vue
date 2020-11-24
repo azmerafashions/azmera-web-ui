@@ -35,18 +35,18 @@
       </li>
 
       <li class="mt-1">
-        <a class="bg-pink-400 rounded-lg p-1 text-xs" href=""> scarf</a>
-        <a class="bg-pink-400 rounded-lg p-1 text-xs" href="">henna</a>
-        <a class="bg-pink-400 rounded-lg p-1 text-xs" href="">frok</a>
-        <a class="bg-pink-400 rounded-lg p-1 text-xs" href="">dress</a>
-        <a class="bg-pink-400 rounded-lg p-1 text-xs" href="">sharee</a>
+        <a class="pink-button primaryGradient" href=""> scarf</a>
+        <a class="pink-button primaryGradient" href="">henna</a>
+        <a class="pink-button primaryGradient" href="">frok</a>
+        <a class="pink-button primaryGradient" href="">dress</a>
+        <a class="pink-button primaryGradient" href="">sharee</a>
       </li>
       <li class="mt-1">
         <button
           href="#"
-          class="float-right rounded-full shadow-sm hover:shadow-md focus:outline-none bg-pink-200 font-bold px-2 py-1 text-xs"
+          class="float-right pink-button primaryGradient rounded-full"
         >
-          <fa icon="arrow-right" class="text-xs text-black" />
+          <fa icon="arrow-right" class="" />
         </button>
       </li>
     </ul>
@@ -57,4 +57,32 @@
 export default {}
 </script>
 
-<style></style>
+<style>
+.pink-button {
+  @apply shadow-sm;
+  @apply bg-pink-200;
+
+  @apply font-bold;
+  @apply px-2;
+  @apply py-1;
+  @apply text-white;
+  @apply shadow-md;
+  @apply rounded-md;
+
+  @apply text-xs;
+}
+.pink-button:hover {
+  @apply shadow-md;
+  @apply bg-pink-300;
+  @apply text-white;
+}
+.pink-button:focus {
+  @apply outline-none;
+}
+.primaryGradient:active {
+  @apply bg-gradient-to-r;
+  @apply from-purple-300;
+  @apply via-pink-400;
+  @apply to-red-500;
+}
+</style>

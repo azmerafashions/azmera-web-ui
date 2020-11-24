@@ -16,29 +16,37 @@
           <li>
             <search />
           </li>
-          <li>
+          <li @click="closeSidebar">
             <nuxt-link to="/">Home</nuxt-link>
           </li>
-          <li>
+          <li @click="closeSidebar">
             <nuxt-link to="/blog">Blog</nuxt-link>
           </li>
-          <li>
+          <li @click="closeSidebar">
             <sidebaritem :mainmenu="mainmenu">
               <div slot="submenu" class="flex flex-col">
-                <nuxt-link to="">submenu1</nuxt-link>
-                <nuxt-link to="">submenu2</nuxt-link>
-                <nuxt-link to="">submenu3</nuxt-link>
-                <nuxt-link to="">submenu4</nuxt-link>
+                <div @click="closeSidebar">
+                  <nuxt-link to="">submenu 1</nuxt-link>
+                </div>
+                <div @click="closeSidebar">
+                  <nuxt-link to="">submenu 2</nuxt-link>
+                </div>
+                <div @click="closeSidebar">
+                  <nuxt-link to="">submenu 3</nuxt-link>
+                </div>
+                <div @click="closeSidebar">
+                  <nuxt-link to="">submenu 4</nuxt-link>
+                </div>
               </div>
             </sidebaritem>
           </li>
-          <li>
+          <li @click="closeSidebar">
             <nuxt-link to="/design">Design</nuxt-link>
           </li>
-          <li>
+          <li @click="closeSidebar">
             <nuxt-link to="/about">About us</nuxt-link>
           </li>
-          <li>
+          <li @click="closeSidebar">
             <nuxt-link to="/login"> login </nuxt-link>
           </li>
         </ul>
@@ -72,6 +80,9 @@ export default {
   methods: {
     toggleSidebar() {
       this.isSidebar = !this.isSidebar
+    },
+    closeSidebar() {
+      this.isSidebar = false
     },
   },
 }
