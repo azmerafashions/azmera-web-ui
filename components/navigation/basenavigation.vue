@@ -1,18 +1,25 @@
 <template>
   <div
-    class="hidden text-white text-2xl lg:flex lg:flex-row lg:justify-between lg:items-center"
+    class="hidden text-white text-xl lg:flex lg:flex-row lg:justify-between lg:items-center"
   >
     <nuxt-link to="/"> Home </nuxt-link>
     <nuxt-link to="/blog"> Blog </nuxt-link>
     <navigationitem
-      iconClasses="text-white text-2xl"
-      linkClasses="text-white text-2xl"
+      iconClasses="text-white text-xl"
+      linkClasses="text-white text-xl"
       :mainmenu="{ name: 'Product', path: '' }"
-    ></navigationitem>
+    >
+      <div slot="submenu" class="">
+        <div>Product1</div>
+        <div>Product2</div>
+        <div>Product3</div>
+        <div>Product4</div>
+      </div>
+    </navigationitem>
     <nuxt-link to="/design"> Design </nuxt-link>
     <navigationitem
-      iconClasses="text-white text-2xl"
-      linkClasses="text-white text-2xl"
+      iconClasses="text-white text-xl"
+      linkClasses="text-white text-xl"
       :mainmenu="{ name: 'Join Us', path: '' }"
     >
       <div slot="submenu" class="">

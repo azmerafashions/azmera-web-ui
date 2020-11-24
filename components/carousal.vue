@@ -1,49 +1,65 @@
 <template>
-  <div
-    class="bg-white h-64 flex flex-row items-center justify-between relative text-black"
-  >
-    <fa
-      class="absolute left-0 text-2xl sm:text-5xl"
-      icon="chevron-left"
-      @click="prevIndex"
-    ></fa>
+  <div>
+    <div
+      class="flex flex-row align-middle relative justify-center items-center carousal-height mb-6 shadow"
+    >
+      <fa
+        class="cursor-pointer absolute left-0 z-20 text-2xl sm:text-5xl text-black"
+        icon="chevron-left"
+        @click="prevIndex"
+      ></fa>
+      <div class="w-full h-full">
+        <carousal-item v-if="currentItem == 0" class="text-white">
+          <div class="" slot="carousal-item">
+            <h3>frist carousal</h3>
+          </div>
+          <img
+            slot="carousal-image"
+            class="w-full h-full"
+            :src="require('@/assets/image/logo.jpg')"
+            alt="image"
+          /> </carousal-item
+        ><carousal-item v-if="currentItem == 1" class="text-white">
+          <div class="" slot="carousal-item">
+            <h3>second carousal</h3>
+          </div>
+          <img
+            slot="carousal-image"
+            class="w-full h-full"
+            :src="require('@/assets/image/logo.jpg')"
+            alt="image"
+          />
+        </carousal-item>
+        <carousal-item v-if="currentItem == 2" class="text-white">
+          <div class="" slot="carousal-item">
+            <h3>third carousal</h3>
+          </div>
+          <img
+            slot="carousal-image"
+            class="w-full h-full"
+            :src="require('@/assets/image/logo.jpg')"
+            alt="image"
+          />
+        </carousal-item>
+      </div>
 
-    <corousal-item>
-      <div v-if="currentItem == 0" slot="corousal-item">
-        <img src="/assets/image/corousal1.webp" alt="" />
-        <h3>fisrt corousal</h3>
-      </div>
-      <div v-else-if="currentItem == 1" slot="corousal-item">
-        <img src="@/assets/image/corousal2.jpg" alt="" />
-
-        <h3>second corousal</h3>
-      </div>
-      <div v-else-if="currentItem == 2" slot="corousal-item">
-        <h3>third corousal</h3>
-        <img src="@/assets/image/corousal1.webp" alt="" />
-      </div>
-      <div v-else slot="corousal-item">
-        <h3>forth corousal</h3>
-        <img src="@/assets/image/corousal2.jpg" alt="" />
-      </div>
-    </corousal-item>
-
-    <fa
-      class="absolute right-0 text-2xl sm:text-5xl"
-      icon="chevron-right"
-      @click="nextIndex"
-    ></fa>
+      <fa
+        class="cursor-pointer absolute right-0 text-2xl sm:text-5xl"
+        icon="chevron-right"
+        @click="nextIndex"
+      ></fa>
+    </div>
   </div>
 </template>
 
 <script>
-import CorousalItem from './CorousalItem.vue'
+import CarousalItem from './CarousalItem.vue'
 export default {
-  components: { 'corousal-item': CorousalItem },
+  components: { 'carousal-item': CarousalItem },
   data() {
     return {
       currentItem: 0,
-      itemCount: 4,
+      itemCount: 3,
     }
   },
   created() {
@@ -61,13 +77,16 @@ export default {
       } else this.currentItem = this.itemCount - 1
     },
     timer() {
-      setTimeout(() => {
+      setInterval(() => {
         this.nextIndex()
-        this.timer()
-      }, 1000)
+      }, 3000)
     },
   },
 }
 </script>
 
-<style></style>
+<style>
+.carousal-height {
+  height: 20rem;
+}
+</style>

@@ -2,7 +2,7 @@
   <div>
     <baseheader />
     <div>
-      <sidebar class="md:hidden footerbg" />
+      <sidebar class="md:hidden primaryGradient" />
       <Nuxt />
     </div>
     <basefooter />
@@ -23,8 +23,7 @@ export default {
 </script>
 
 <style>
-header,
-.footerbg {
+.primaryGradient {
   /* background: linear-gradient(
     to left,
     rgba(26, 118, 224, 1) 0%,

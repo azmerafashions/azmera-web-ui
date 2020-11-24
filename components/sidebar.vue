@@ -3,7 +3,7 @@
     <div
       id="sidebar"
       :class="isSidebar ? '' : 'hidden'"
-      class="md:sticky fixed top-0 left-0 h-screen md:block footerbg bg-red-700w-2/3 md:w-1/5"
+      class="md:sticky fixed top-0 left-0 h-screen md:block primaryGradient bg-red-700w-2/3 md:w-1/5"
     >
       <div
         class="float-right cursor-pointer md:hidden text-white text-lg px-4 py-2"
