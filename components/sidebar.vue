@@ -3,54 +3,70 @@
     <div
       id="sidebar"
       :class="isSidebar ? '' : 'hidden'"
-      class="md:sticky fixed top-0 left-0 h-screen md:block primaryGradient bg-red-700w-2/3 md:w-1/5"
+      class="md:sticky fixed top-0 left-0 h-screen md:block bg-red-700"
     >
       <div
-        class="float-right cursor-pointer md:hidden text-white text-lg px-4 py-2"
-        @click="toggleSidebar"
+        class="pt-2 pb-3 flex flex-row items-center shadow-lg px-4 primaryGradient"
       >
-        <fa icon="window-close"> </fa>
+        <nuxt-link
+          to="/"
+          class="flex cursor-pointer flex-row items-center"
+          title="Azmera Fashions"
+        >
+          <img
+            class="w-8 h-8 mr-4 rounded-full"
+            src="@/assets/image/logo.jpg"
+            alt="logo"
+          />
+          <h2 class="text-white italic text-xl md:text-lg">Azmera Fashions</h2>
+        </nuxt-link>
+        <div
+          class="float-right cursor-pointer md:hidden pl-4 text-white text-lg py-2"
+          @click="toggleSidebar"
+        >
+          <fa icon="window-close"> </fa>
+        </div>
       </div>
-      <div>
-        <ul class="w-full flex flex-col justify-between items-start px-4 py-2">
-          <li>
-            <search />
-          </li>
-          <li @click="closeSidebar">
-            <nuxt-link to="/">Home</nuxt-link>
-          </li>
-          <li @click="closeSidebar">
-            <nuxt-link to="/blog">Blog</nuxt-link>
-          </li>
-          <li @click="closeSidebar">
-            <sidebaritem :mainmenu="mainmenu">
-              <div slot="submenu" class="flex flex-col">
-                <div @click="closeSidebar">
-                  <nuxt-link to="">submenu 1</nuxt-link>
-                </div>
-                <div @click="closeSidebar">
-                  <nuxt-link to="">submenu 2</nuxt-link>
-                </div>
-                <div @click="closeSidebar">
-                  <nuxt-link to="">submenu 3</nuxt-link>
-                </div>
-                <div @click="closeSidebar">
-                  <nuxt-link to="">submenu 4</nuxt-link>
-                </div>
+      <ul
+        class="w-full flex flex-col items-center space-y-2 px-4 primaryGradient h-full py-4 text-lg"
+      >
+        <li class="w-full">
+          <search class="w-full block" />
+        </li>
+        <li class="w-full" @click="closeSidebar">
+          <nuxt-link to="/">Home</nuxt-link>
+        </li>
+        <li class="w-full" @click="closeSidebar">
+          <nuxt-link to="/blog">Blog</nuxt-link>
+        </li>
+        <li class="w-full" @click="closeSidebar">
+          <sidebaritem :mainmenu="mainmenu">
+            <div slot="submenu" class="flex flex-col">
+              <div @click="closeSidebar">
+                <nuxt-link to="">submenu 1</nuxt-link>
               </div>
-            </sidebaritem>
-          </li>
-          <li @click="closeSidebar">
-            <nuxt-link to="/design">Design</nuxt-link>
-          </li>
-          <li @click="closeSidebar">
-            <nuxt-link to="/about">About us</nuxt-link>
-          </li>
-          <li @click="closeSidebar">
-            <nuxt-link to="/login"> login </nuxt-link>
-          </li>
-        </ul>
-      </div>
+              <div @click="closeSidebar">
+                <nuxt-link to="">submenu 2</nuxt-link>
+              </div>
+              <div @click="closeSidebar">
+                <nuxt-link to="">submenu 3</nuxt-link>
+              </div>
+              <div @click="closeSidebar">
+                <nuxt-link to="">submenu 4</nuxt-link>
+              </div>
+            </div>
+          </sidebaritem>
+        </li>
+        <li class="w-full" @click="closeSidebar">
+          <nuxt-link to="/design">Design</nuxt-link>
+        </li>
+        <li class="w-full" @click="closeSidebar">
+          <nuxt-link to="/about">About us</nuxt-link>
+        </li>
+        <li class="w-full" @click="closeSidebar">
+          <nuxt-link to="/login"> login </nuxt-link>
+        </li>
+      </ul>
     </div>
   </div>
 </template>

@@ -25,32 +25,41 @@ export default {
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/fontawesome',
   ],
 
+  fontawesome: {
+    component: 'fa',
+    icons: {
+      solid: true,
+      // brands: ['faGoogle', 'faLinkedin'],
+      brands: true,
+    },
+  },
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
-    [
-      'nuxt-fontawesome',
-      {
-        component: 'fa',
-        imports: [
-          {
-            set: '@fortawesome/free-solid-svg-icons',
-            icons: ['fas'],
-          },
-          // {
-          // set: '@fortawesome/free-brands-svg-icons',
-          // icons: ['fad'],
-          // },
-          // please note this is PRO set in this example,
-          // you must have it in your node_modules to actually import
-        ],
-      },
-    ],
+    // [
+    //   'nuxt-fontawesome',
+    //   {
+    //     component: 'fa',
+    //     imports: [
+    //       {
+    //         set: '@fortawesome/free-solid-svg-icons',
+    //         icons: ['fas'],
+    //       },
+    //       {
+    //         set: '@fortawesome/free-brands-svg-icons',
+    //         icons: ['fad'],
+    //       },
+    //       // please note this is PRO set in this example,
+    //       // you must have it in your node_modules to actually import
+    //     ],
+    //   },
+    // ],
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)

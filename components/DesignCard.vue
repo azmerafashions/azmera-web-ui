@@ -35,11 +35,11 @@
       </li>
 
       <li class="mt-1">
-        <a class="pink-button primaryGradient" href=""> scarf</a>
-        <a class="pink-button primaryGradient" href="">henna</a>
-        <a class="pink-button primaryGradient" href="">frok</a>
-        <a class="pink-button primaryGradient" href="">dress</a>
-        <a class="pink-button primaryGradient" href="">sharee</a>
+        <nuxt-link class="pink-button primaryGradient" to=""> scarf</nuxt-link>
+        <nuxt-link class="pink-button primaryGradient" to="">henna</nuxt-link>
+        <nuxt-link class="pink-button primaryGradient" to="">frok</nuxt-link>
+        <nuxt-link class="pink-button primaryGradient" to="">dress</nuxt-link>
+        <nuxt-link class="pink-button primaryGradient" to="">sharee</nuxt-link>
       </li>
       <li class="mt-1">
         <button
@@ -57,7 +57,7 @@
 export default {}
 </script>
 
-<style>
+<style scoped>
 .pink-button {
   @apply shadow-sm;
   @apply bg-pink-200;
