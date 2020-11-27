@@ -1,8 +1,8 @@
 <template>
   <div>
     <baseheader />
-    <div>
-      <sidebar class="md:hidden primaryGradient" />
+    <div class="w-full">
+      <sidebar class="md:hidden" />
       <Nuxt />
     </div>
     <basefooter />

@@ -9,17 +9,20 @@
         @click="prevIndex"
       ></fa>
       <div class="w-full h-full">
-        <carousal-item v-if="currentItem == 0" class="text-white">
-          <div class="" slot="carousal-item">
-            <h3>frist carousal</h3>
-          </div>
-          <img
-            slot="carousal-image"
-            class="w-full h-full"
-            :src="require('@/assets/image/logo.jpg')"
-            alt="image"
-          /> </carousal-item
-        ><carousal-item v-if="currentItem == 1" class="text-white">
+        <transition name="slide">
+          <carousal-item v-if="currentItem == 0" class="text-white">
+            <div class="" slot="carousal-item">
+              <h3>frist carousal</h3>
+            </div>
+            <img
+              slot="carousal-image"
+              class="w-full h-full"
+              :src="require('@/assets/image/logo.jpg')"
+              alt="image"
+            />
+          </carousal-item>
+        </transition>
+        <carousal-item v-if="currentItem == 1" class="text-white">
           <div class="" slot="carousal-item">
             <h3>second carousal</h3>
           </div>
@@ -88,5 +91,18 @@ export default {
 <style>
 .carousal-height {
   height: 20rem;
+}
+.slide-enter-active,
+.slide-leave-active {
+  @apply transition-all;
+  @apply duration-700;
+  @apply ease-out;
+  /* transition: all 0.3s ease-out; */
+}
+.slide-enter,
+.slide-leave-to {
+  @apply transform;
+  @apply -translate-x-full;
+  /* transform: translateX(-100%); */
 }
 </style>

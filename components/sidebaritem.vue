@@ -1,28 +1,24 @@
 <template>
-  <div>
-    <div>
-      <div class="flex justify-start items-center">
-        <nuxt-link :class="linkClasses" class="inline" :to="mainmenu.path"
-          >{{ mainmenu.name }}
-        </nuxt-link>
-        <div
-          :class="iconClasses"
-          class="cursor-pointer inline px-2"
-          @click="toggleSubMenu"
-        >
-          <svg
-            class="fill-current h-4 w-4"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-          >
-            <path
-              d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
-            />
-          </svg>
-        </div>
+  <div :class="isSubmenu ? '' : 'hover:shadow-md'" class="px-2 py-1">
+    <div
+      class="flex justify-start items-center text-white link cursor-pointer"
+      @click="toggleSubMenu"
+    >
+      <span :class="linkClasses" class="inline cursor-pointer"
+        >{{ mainmenu.name }}
+      </span>
+      <div
+        v-if="!isSubmenu"
+        :class="iconClasses"
+        class="inline ml-2 cursor-pointer"
+      >
+        <fa class="text-white" icon="chevron-down"></fa>
       </div>
-      <slot v-if="isSubmenu" name="submenu"> </slot>
+      <div v-else :class="iconClasses" class="inline ml-2 cursor-pointer">
+        <fa class="text-white" icon="chevron-up"></fa>
+      </div>
     </div>
+    <slot v-if="isSubmenu" name="submenu"> </slot>
   </div>
 </template>
 
@@ -41,7 +37,7 @@ export default {
     iconClasses: {
       type: String,
       required: false,
-      default: 'text-gray-700',
+      default: 'text-white',
     },
   },
   data() {
