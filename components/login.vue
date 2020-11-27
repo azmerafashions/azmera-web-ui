@@ -1,6 +1,7 @@
 <template>
-  <div>
-    <div class="flex justify-center md:justify-between border-2">
+  <div class="w-full h-screen primaryGradient px-16 py-16">
+    <div class="bg-white rounded-xl shadow-lg min-h-full min-w-full"></div>
+    <!-- <div class="flex justify-center md:justify-between border-2">
       <div class="h-screen w-full p-10 flex flex-col md:flex-row">
         <div
           id="appname"
@@ -60,7 +61,7 @@
           </li>
         </ul>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 

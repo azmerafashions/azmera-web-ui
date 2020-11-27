@@ -7,6 +7,7 @@
 <script>
 import login from '@/components/login'
 export default {
+  layout: 'login',
   components: {
     login,
   },
