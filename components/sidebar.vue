@@ -12,7 +12,7 @@
         class="md:sticky fixed top-0 left-0 h-screen rounded-r-2xl overflow-hidden border-box"
       >
         <div
-          class="pt-3 pb-4 flex flex-row items-center border-b border-solid border-pink-900 px-4 primaryGradient shadow-2xl rounded-tr-2xl"
+          class="pt-4 hover:shadow-md pb-3 flex flex-row items-center px-4 primaryGradient shadow-2xl rounded-tr-2xl"
         >
           <nuxt-link
             to="/"
@@ -55,7 +55,7 @@
             >
               <div slot="submenu" class="flex flex-col">
                 <div class="link" @click="closeSidebar">
-                  <nuxt-link class="w-full" to="">submenu 1</nuxt-link>
+                  <nuxt-link class="w-full" to="/product">submenu 1</nuxt-link>
                 </div>
                 <div class="link" @click="closeSidebar">
                   <nuxt-link class="w-full" to="">submenu 2</nuxt-link>

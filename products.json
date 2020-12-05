@@ -31,13 +31,13 @@
       "createdOn": "20.11.2020"
     },
     {
-      "id": "101",
-      "categoryId": "1",
-      "description": "this is hand stich product",
-      "material": ["cotton"],
-      "name": "dress",
-      "colors": "violet,purple,red,blue,white,lemon green",
-      "price": "10000",
+      "id": "102",
+      "categoryId": "dress",
+      "description": "collection and handstich",
+      "material": ["linen"],
+      "name": "kurti",
+      "colors": "purple,red,blue,white,lemon green",
+      "price": "1000",
       "tags": ["1", "3", "2"],
       "updatedOn": "24.11.2020",
       "createdOn": "20.11.2020"

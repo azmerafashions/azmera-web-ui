@@ -3,3 +3,33 @@
 @tailwind components;
 
 @tailwind utilities;
+
+@layer components {
+  .pink-button {
+    @apply shadow-sm;
+    @apply bg-pink-200;
+
+    @apply font-bold;
+    @apply px-2;
+    @apply py-1;
+    @apply text-white;
+    @apply shadow-md;
+    @apply rounded-md;
+
+    @apply text-xs;
+  }
+  .pink-button:hover {
+    @apply shadow-md;
+    @apply bg-pink-300;
+    @apply text-white;
+  }
+  .pink-button:focus {
+    @apply outline-none;
+  }
+  .primaryGradient:active {
+    @apply bg-gradient-to-r;
+    @apply from-purple-300;
+    @apply via-pink-400;
+    @apply to-red-500;
+  }
+}
