@@ -13,11 +13,15 @@
 </template>
 
 <script>
+import products from '@/products.json'
 import designcard from '@/components/DesignCard.vue'
 
 export default {
   components: {
     designcard,
+  },
+  mounted() {
+    console.log(products)
   },
 }
 </script>

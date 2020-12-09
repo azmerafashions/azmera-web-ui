@@ -78,6 +78,9 @@
           <li class="w-full link" @click="closeSidebar">
             <nuxt-link class="w-full" to="/login"> login </nuxt-link>
           </li>
+          <li class="w-full link" @click="closeSidebar">
+            <nuxt-link class="w-full" to="/addproduct"> addproduct </nuxt-link>
+          </li>
         </ul>
       </div>
     </transition>

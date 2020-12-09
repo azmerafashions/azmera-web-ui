@@ -42,5 +42,15 @@
       "updatedOn": "24.11.2020",
       "createdOn": "20.11.2020"
     }
+  ],
+  "cart": [
+    {
+      "cusId": "101",
+      "productId": "102"
+    },
+    {
+      "cusId": "103",
+      "productId": "101"
+    }
   ]
 }
