@@ -3,11 +3,14 @@
     <div
       class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 grid-cols-1 gap-6"
     >
-      <designcard />
-      <designcard />
-      <designcard />
-      <designcard />
-      <designcard />
+      <div v-for="product in productsList" :key="product.id">
+        <!-- <nuxt-link
+          :to="{ name: 'product-id', params: { id: product.id } }"
+          ><designcard :product="product"
+        /></nuxt-link> -->
+
+        <designcard :product="product" />
+      </div>
     </div>
   </div>
 </template>
@@ -20,8 +23,14 @@ export default {
   components: {
     designcard,
   },
+  data() {
+    return {
+      productsList: [],
+    }
+  },
   mounted() {
-    console.log(products)
+    console.log(products.products)
+    this.productsList = products.products
   },
 }
 </script>

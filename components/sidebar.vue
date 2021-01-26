@@ -36,15 +36,16 @@
           </div>
         </div>
         <ul
+          @click="closeSidebar"
           class="w-full flex flex-col items-center space-y-2 px-4 primaryGradient h-full py-4 text-lg rounded-br-2xl"
         >
           <li class="w-full">
             <search class="w-full block" />
           </li>
-          <li class="w-full link" @click="closeSidebar">
+          <li class="w-full link">
             <nuxt-link class="w-full" to="/">Home</nuxt-link>
           </li>
-          <li class="w-full link" @click="closeSidebar">
+          <li class="w-full link">
             <nuxt-link class="w-full" to="/blog">Blog</nuxt-link>
           </li>
           <li class="w-full">
@@ -54,31 +55,31 @@
               icon-classes="text-base"
             >
               <div slot="submenu" class="flex flex-col">
-                <div class="link" @click="closeSidebar">
-                  <nuxt-link class="w-full" to="/product">submenu 1</nuxt-link>
+                <div class="link">
+                  <nuxt-link class="w-full" to="/product">All</nuxt-link>
                 </div>
-                <div class="link" @click="closeSidebar">
-                  <nuxt-link class="w-full" to="">submenu 2</nuxt-link>
+                <div class="link">
+                  <nuxt-link class="w-full" to="">Dress</nuxt-link>
                 </div>
-                <div class="link" @click="closeSidebar">
-                  <nuxt-link class="w-full" to="">submenu 3</nuxt-link>
+                <div class="link">
+                  <nuxt-link class="w-full" to="">Saree</nuxt-link>
                 </div>
-                <div class="link" @click="closeSidebar">
-                  <nuxt-link class="w-full" to="">submenu 4</nuxt-link>
+                <div class="link">
+                  <nuxt-link class="w-full" to="">Hand Embroidery</nuxt-link>
                 </div>
               </div>
             </sidebaritem>
           </li>
-          <li class="w-full link" @click="closeSidebar">
+          <li class="w-full link">
             <nuxt-link class="w-full" to="/design">Design</nuxt-link>
           </li>
-          <li class="w-full link" @click="closeSidebar">
+          <li class="w-full link">
             <nuxt-link class="w-full" to="/about">About us</nuxt-link>
           </li>
-          <li class="w-full link" @click="closeSidebar">
+          <li class="w-full link">
             <nuxt-link class="w-full" to="/login"> login </nuxt-link>
           </li>
-          <li class="w-full link" @click="closeSidebar">
+          <li class="w-full link">
             <nuxt-link class="w-full" to="/addproduct"> addproduct </nuxt-link>
           </li>
         </ul>
@@ -101,7 +102,7 @@ export default {
         name: 'Product',
         path: '/product',
       },
-      isSidebar: true,
+      isSidebar: false,
     }
   },
   created() {
