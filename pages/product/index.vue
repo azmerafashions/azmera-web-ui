@@ -1,27 +1,15 @@
 <template>
   <div class="px-6 pt-12 bg-pink-200">
-    <div
-      class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 grid-cols-1 gap-6"
-    >
-      <div v-for="product in productsList" :key="product.id">
-        <!-- <nuxt-link
-          :to="{ name: 'product-id', params: { id: product.id } }"
-          ><designcard :product="product"
-        /></nuxt-link> -->
-
-        <designcard :product="product" />
-      </div>
-    </div>
+    <ProductsList :products="productsList" />
   </div>
 </template>
 
 <script>
 import products from '@/products.json'
-import designcard from '@/components/DesignCard.vue'
-
+import ProductsList from '@/components/product/ProductList'
 export default {
   components: {
-    designcard,
+    ProductsList,
   },
   data() {
     return {
