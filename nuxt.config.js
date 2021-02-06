@@ -42,6 +42,25 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    [
+      '@nuxtjs/firebase',
+      {
+        config: {
+          apiKey: 'AIzaSyANUWmGfy04NVQTOFmgmjhtbrYLgox9zUQ',
+          authDomain: 'azmera-fashion.firebaseapp.com',
+          databaseURL: 'https://azmera-fashion-default-rtdb.firebaseio.com',
+          projectId: 'azmera-fashion',
+          storageBucket: 'azmera-fashion.appspot.com',
+          messagingSenderId: '74830920266',
+          appId: '1:74830920266:web:76485f43318bfc8c8ec4b3',
+        },
+        services: {
+          auth: true,
+          firestore: true,
+          database: true, // Just as example. Can be any other service.
+        },
+      },
+    ],
     // [
     //   'nuxt-fontawesome',
     //   {

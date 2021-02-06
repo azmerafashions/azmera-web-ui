@@ -1,6 +1,9 @@
 <template>
   <div>
-    <input type="color" name="" placeholder="choose color" id="" />
+    <button class="px-4 py-4 text-white bg-blue-200" @click="addProduct">
+      addproduct
+    </button>
+    <input id="" type="color" name="" placeholder="choose color" />
     <div class="flex flex-col">
       <h5 class="text-4xl uppercase font-bold text-center">
         {{ productItem.name }}
@@ -47,6 +50,10 @@ export default {
       productItem: {},
     }
   },
+  mounted() {
+    this.productId = this.$route.params.id
+    this.getItem()
+  },
   methods: {
     getColor(colors) {
       return ('' + colors).split(',')
@@ -58,10 +65,7 @@ export default {
         }
       })
     },
-  },
-  mounted() {
-    this.productId = this.$route.params.id
-    this.getItem()
+    addProduct() {},
   },
 }
 </script>
