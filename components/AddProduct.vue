@@ -1,6 +1,7 @@
 <template>
   <div>
     <form
+      id="addproduct"
       class="flex flex-col items-center justify-center align-middle"
       @submit.prevent="submitProduct"
     >
@@ -8,15 +9,9 @@
         class="flex flex-col justify-center max-w-md align-middle space-y-4 py-6"
       >
         <li>
-          <label class="product-image" for="">Upload your image</label>
-          <input
-            id="product-image"
-            required
-            type="file"
-            name=""
-            @change="previewFile"
-          />
+          <upload-image @sucess="setPhotoUrl($event)" />
         </li>
+
         <li class="">
           <BaseInput>
             <fa slot="icon-left" icon="user" class="m-2"> </fa>
@@ -128,14 +123,13 @@
 
 <script>
 import BaseInput from './base/BaseInput.vue'
+import UploadImage from './product/UploadImage.vue'
 export default {
-  components: { BaseInput },
+  components: { BaseInput, UploadImage },
   data() {
     return {
       productTag: '',
       productMaterial: '',
-
-      // we have to upload image
       photoUrl: '',
       category: 'Sharee',
       description: '',
@@ -150,6 +144,9 @@ export default {
     }
   },
   methods: {
+    setPhotoUrl(photoUrl) {
+      this.photoUrl = photoUrl
+    },
     addTag() {
       this.tags.push(this.productTag)
       this.productTag = ''
@@ -162,12 +159,10 @@ export default {
       // make new color default value
       this.colors.push('#FFFFFF')
     },
-    previewFile(e) {
-      console.log(e.target.files)
-    },
-    submitProduct() {
+
+    async submitProduct() {
       const product = {
-        // photoUrl: ,
+        photoUrl: this.photoUrl,
         category: this.category,
         description: this.description ? this.description : this.name,
         name: this.name,
@@ -179,16 +174,24 @@ export default {
         tags: this.tags,
         colors: this.colors,
       }
-      // this.$fire.firestore
-      //   .collection('products')
-      //   .add(product)
-      //   .then((res) => {
-      //     console.log(res)
-      //   })
-      //   .catch((e) => {
-      //     console.log(e)
-      //   })
-      console.log(product)
+      try {
+        const productsCollection = this.$fire.firestore.collection('products')
+        await productsCollection.add(product)
+        // reset form
+        this.photoUrl = ''
+        this.category = 'saree'
+        this.description = ''
+        this.name = ''
+        this.price = ''
+        this.updatedOn = new Date()
+        this.createdOn = new Date()
+        this.materials = []
+        this.quantity = ''
+        this.tags = []
+        this.colors = []
+      } catch (error) {
+        alert('error come in save product' + error.messae)
+      }
     },
   },
 }

@@ -57,7 +57,7 @@ export default {
         services: {
           auth: true,
           firestore: true,
-          database: true, // Just as example. Can be any other service.
+          storage: true,
         },
       },
     ],
