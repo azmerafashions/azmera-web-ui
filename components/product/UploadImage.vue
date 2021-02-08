@@ -21,7 +21,7 @@
         </button>
         <button
           type="button"
-          @click="cancleImage($event)"
+          @click="cancleImage()"
           class="bg-blue-900 px-2 py-1 text-white rounded-lg"
         >
           cancel

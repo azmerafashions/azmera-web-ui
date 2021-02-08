@@ -16,6 +16,7 @@ export default {
     products: {
       type: Array,
       required: false,
+      default: () => [],
     },
   },
   components: {
